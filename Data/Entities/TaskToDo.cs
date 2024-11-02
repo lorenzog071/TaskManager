@@ -1,8 +1,8 @@
 namespace TaskManager.Data.Entities
 {
-    public class TaskToDo
+    public class TaskToDo : BaseEntity
     {   
-        public int Id { get; set; }
+
         public string? Name { get; set; }
         public string? Descripcion { get; set; }
         public bool Done { get; set; }
