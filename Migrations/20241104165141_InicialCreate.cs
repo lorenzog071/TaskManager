@@ -58,6 +58,7 @@ namespace TaskManager.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Date = table.Column<DateOnly>(type: "date", nullable: false),
                     Done = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

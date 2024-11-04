@@ -12,7 +12,7 @@ using TaskManager.Data;
 namespace TaskManager.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241102163908_InicialCreate")]
+    [Migration("20241104165141_InicialCreate")]
     partial class InicialCreate
     {
         /// <inheritdoc />
@@ -230,6 +230,9 @@ namespace TaskManager.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");

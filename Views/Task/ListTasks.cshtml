@@ -1,0 +1,25 @@
+@model TaskManager.Models.TaskListViewModel
+
+<div class="row">
+    <div class="col-12">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Descripcion</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model.Tasks)
+                {
+                    <tr>
+                        <td>@task.Name</td> 
+                        <td>@task.Descripcion</td>
+                        <td>@task.Done</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
