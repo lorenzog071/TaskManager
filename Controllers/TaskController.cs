@@ -25,7 +25,7 @@ namespace TaskManager.Controllers
                 {
                     Name = task.Name,
                     Descripcion = task.Descripcion,
-                    Done = task.Done
+                    TaskPriority = (TaskListModel.Priority)task.TaskPriority
                 });
             }
             return View("ListTasks", model);

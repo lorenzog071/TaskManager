@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TaskManager.Migrations
 {
     /// <inheritdoc />
-    public partial class InicialCreate : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,8 +58,7 @@ namespace TaskManager.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Date = table.Column<DateOnly>(type: "date", nullable: false),
-                    Done = table.Column<bool>(type: "bit", nullable: false)
+                    TaskPriority = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
