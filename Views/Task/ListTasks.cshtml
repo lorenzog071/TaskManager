@@ -12,14 +12,23 @@
                 </tr>
             </thead>
             <tbody>
+                
                 @foreach (var task in Model.Tasks)
                 {
-                    <tr>
+                    var rowClass = task.TaskPriority switch
+                    {
+                        TaskListModel.Priority.Alta => "bg-alta",
+                        TaskListModel.Priority.Media => "bg-media",
+                        TaskListModel.Priority.Baja => "bg-baja",
+                        _ => ""
+                    };
+                    <tr class="@rowClass">
                         <td>@task.Name</td> 
                         <td>@task.Descripcion</td>
                         <td>@task.TaskPriority</td>
                     </tr>
                 }
+            
             </tbody>
         </table>
     </div>

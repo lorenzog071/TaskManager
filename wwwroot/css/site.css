@@ -20,3 +20,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.bg-alta {
+  background-color: #ffcccc; /* Color para prioridad alta */
+}
+
+.bg-media {
+  background-color: #ffffcc; /* Color para prioridad media */
+}
+
+.bg-baja {
+  background-color: #ccffcc; /* Color para prioridad baja */
+}
